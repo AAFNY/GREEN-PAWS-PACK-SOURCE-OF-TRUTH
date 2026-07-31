@@ -50,7 +50,7 @@
   .sec-sub{color:var(--muted);max-width:64ch;margin:10px 0 26px;font-size:17px}
 
   /* the spine / sequence */
-  .spine{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:8px}
+  .spine{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:8px}
   .step{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:16px 15px;position:relative}
   .step .n{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--gold)}
   .step h3{font-size:18px;margin:6px 0 6px;font-weight:600}
@@ -58,6 +58,12 @@
   .step .when{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.05em;color:var(--muted);margin-top:10px;text-transform:uppercase}
   .step.lead{border-color:var(--leaf);box-shadow:inset 0 0 0 1px var(--leaf)}
   .step.lead .n{color:var(--leaf-deep)}
+  .step.paired{background:#eef3ea}
+  .step.paired .n{color:var(--leaf-deep)}
+  .pairwrap{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;border:1px dashed #b8ccb4;border-radius:6px;padding:10px;background:rgba(172,175,80,.06)}
+  .pairwrap .pairlbl{position:absolute;top:-9px;left:14px;background:var(--paper);font-family:"Helvetica Neue",Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf-deep);padding:0 8px}
+  @media(max-width:760px){.pairwrap{grid-column:span 2;grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.pairwrap{grid-column:span 1;grid-template-columns:1fr}}
   .step[data-target]{cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
   .step[data-target]:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px var(--leaf),0 6px 16px rgba(43,90,42,.14)}
   .step[data-target]:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
@@ -129,6 +135,16 @@
   .vm-law{display:flex;align-items:center;gap:12px;background:var(--navy);color:#fff;border-radius:5px;padding:16px 20px}
   .vm-law .lbl{font-family:"Helvetica Neue",Arial,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#b8bae0;white-space:nowrap}
   .vm-law .val{font-size:17px;font-weight:600}
+
+  /* tagline rationale */
+  .tagrat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px 22px;margin:16px 0}
+  .tagrat .intro{font-size:15px;color:#31423a;margin-bottom:14px;line-height:1.5}
+  .tagrat .intro b{color:var(--leaf-deep)}
+  .tagword{padding:11px 0;border-top:1px solid var(--line)}
+  .tagword:first-of-type{border-top:none;padding-top:2px}
+  .tagword .w{font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--leaf-deep);margin-bottom:3px}
+  .tagword .w em{color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;font-style:normal}
+  .tagword .d{font-size:14.5px;color:#3a473f;line-height:1.5}
 
   /* connector paths */
   .conf-note{font-size:13px;font-family:"Helvetica Neue",Arial,sans-serif;background:#efe9db;border-left:3px solid var(--warn);padding:12px 15px;border-radius:0 4px 4px 0;margin-bottom:24px;color:#5a4632}
@@ -219,7 +235,7 @@
     <div class="eyebrow">Green Paws Pack &middot; Brand Strategy</div>
     <h1>The No-Screen<br>Strategy</h1>
     <p class="lede">Most children's brands begin on a screen. A child watches the show, then wants the toy. But three-to-five-year-olds don't need a screen to fall in love. They fall for a stuffed animal by holding it, and for a character by hearing the story read again and again. The stuffed animal and the story do the work a screen does for older children, and that changes the order of everything that follows.</p>
-    <div class="thesis"><strong>Sequence:</strong> the proof-of-concept pitch book comes first, a private, not-for-sale edition made only for champions and connectors. Take it to a champion (Pleasant Rowland or Maxine Clark) and let the champion's name unlock a stronger publishing deal and a stronger plush deal in parallel. Then approach the park for a partnership.</div>
+    <div class="thesis"><strong>Green Paws IP go-to-market launch sequence:</strong> the proof-of-concept pitch book comes first, a private, not-for-sale edition made only for champions and connectors. Take it to a champion (Pleasant Rowland or Maxine Clark) and let the champion's name unlock a stronger publishing deal and a stronger plush deal in parallel. Then approach the park for a partnership.</div>
   </div>
 </header>
 
@@ -270,6 +286,22 @@
       <div class="vm-cell tag">
         <div class="lbl">Tagline &middot; for kids</div>
         <div class="val">Sniff. Wag. Bark.</div>
+      </div>
+    </div>
+
+    <div class="tagrat">
+      <div class="intro">A tagline evokes; it does not explain. Like the best of them, it works by feeling and memory, not by spelling out the mission. Underneath, though, the three words map cleanly onto what Green Paws does: <b>look closely, have fun, and care for nature close to home</b>.</div>
+      <div class="tagword">
+        <div class="w">Sniff <em>&middot; looking closely</em></div>
+        <div class="d">A dog explores nose-first. Sniffing is noticing, gathering what is really there. The root of looking closely, and of early science thinking.</div>
+      </div>
+      <div class="tagword">
+        <div class="w">Wag <em>&middot; the joy</em></div>
+        <div class="d">A wagging tail is the delight of being outside, of discovery, of the pack together. The fun that makes it all stick.</div>
+      </div>
+      <div class="tagword">
+        <div class="w">Bark <em>&middot; caring for it</em></div>
+        <div class="d">Bark is calling out to protect the place we love to play. A dog barks to call the pack and speak up for what matters. Caring for a place grows from loving to be there.</div>
       </div>
     </div>
 
@@ -329,39 +361,50 @@
 <section id="sequence">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Product rollout</h2></div>
-    <p class="sec-sub">Three-to-five-year-olds fall in love by holding the toy and hearing the story, not by watching a screen, so a finished object earns the meeting. The proof-of-concept pitch book is that object, a private, not-for-sale edition made only for champions and connectors. Everything after it is unlocked by a champion, and publishing and plush run side by side rather than one before the other.</p>
+    <p class="sec-sub">The order of the five steps, and the pace of each. The proof-of-concept pitch book comes first and earns the champion meeting; everything after is unlocked by the champion, with publishing and plush running together as one step.</p>
     <div class="spine">
       <div class="step lead" data-target="contents" role="link" tabindex="0" aria-label="View pitch book contents">
-        <div class="n">GATE</div>
+        <div class="n">Step 1</div>
         <h3>Proof-of-concept pitch book</h3>
         <p>A private, not-for-sale edition made only for champions and connectors. Demonstrates the property is real and secures the champion meeting.</p>
         <div class="when">Jan 2027</div>
         <div class="tile-cue">See what's inside &rarr;</div>
       </div>
       <div class="step" data-target="ask" role="link" tabindex="0" aria-label="View the champion ask">
-        <div class="n">THEN</div>
+        <div class="n">Step 2</div>
         <h3>Champion</h3>
         <p>Their endorsement, their name, and access to their network. A champion's name is what turns an ordinary deal into a stronger one.</p>
         <div class="when">Early 2027</div>
         <div class="tile-cue">Who they are &amp; the ask &rarr;</div>
       </div>
-      <div class="step">
-        <div class="n">PARALLEL</div>
-        <h3>Publish + plush</h3>
-        <p>Two tracks the champion opens in parallel: the retail book edition for sale, and a plush partner able to commit without a screen property behind it.</p>
-        <div class="when">2027</div>
+      <div class="pairwrap">
+        <span class="pairlbl">Steps 3a &amp; 3b &middot; in parallel</span>
+        <div class="step paired" data-target="publishers" role="link" tabindex="0" aria-label="View publishing partners">
+          <div class="n">Step 3a</div>
+          <h3>Publishing</h3>
+          <p>The retail book edition for sale, self-published or placed with a publisher, with the champion's name improving the terms.</p>
+          <div class="when">2027</div>
+          <div class="tile-cue">Publishing partners &rarr;</div>
+        </div>
+        <div class="step paired" data-target="plush" role="link" tabindex="0" aria-label="View plush partners">
+          <div class="n">Step 3b</div>
+          <h3>Plush</h3>
+          <p>A plush partner able to commit without a screen property behind it. Proves the characters in three dimensions.</p>
+          <div class="when">2027</div>
+          <div class="tile-cue">Plush partners &rarr;</div>
+        </div>
       </div>
       <div class="step">
-        <div class="n">THEN</div>
+        <div class="n">Step 4</div>
         <h3>The park</h3>
         <p>Approach Brooklyn Bridge Park for a partnership, structured so the brand funds the park through a guaranteed floor plus a profit share.</p>
         <div class="when">2028+</div>
       </div>
       <div class="step">
-        <div class="n">THEN</div>
+        <div class="n">Step 5</div>
         <h3>Wider licensing</h3>
         <p>Apparel, accessories, and outdoor and nature toys, which follow recognition rather than leading it.</p>
-        <div class="when">On proof</div>
+        <div class="when">After traction</div>
       </div>
     </div>
   </div>
